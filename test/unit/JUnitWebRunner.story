@@ -12,6 +12,11 @@ import java.util.regex.Pattern
 
 before "start selenium", {
   given "selenium is up and running", {
+	println "\nSYSTEM PROPERTIES:-"
+	println "host: '${System.properties["host"]}'"
+	println "port: '${System.properties["port"]}'"
+	println "browser: '${System.properties["browser"]}'"
+	println "url: '${System.properties["url"]}'"
     selenium = new DefaultSelenium(System.properties["host"],
                Integer.parseInt(System.properties["port"]), 
 			   System.properties["browser"], 
